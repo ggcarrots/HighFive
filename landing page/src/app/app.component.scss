@@ -1,0 +1,299 @@
+.view {
+  height: 100vh;
+  width: 100%;
+}
+
+.view-1 {
+  //background: ;
+}
+
+.links {
+
+  a {
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    cursor: pointer;
+  }
+}
+
+.nav-1 {
+  .left {
+    a {
+      color: #6879F6;
+      font-size: 2rem;
+    }
+  }
+
+  .right {
+    a {
+      color: #3B3350;
+    }
+  }
+
+}
+
+.be-a-part {
+  margin-top: 200px;
+}
+
+.how-it-works-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 78px;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+}
+
+.how-it-works {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  /* or 187% */
+
+
+  color: #FFFFFF;
+}
+
+
+.view-2 {
+  background-image: url("/assets/bg-img-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.view-1-right {
+  background-image: url("/assets/bg-img-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.view-1-left {
+  padding-bottom: 10rem;
+}
+
+.view-2 {
+  .mobile {
+    h1 {
+      max-width: 67%;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+.view-3 {
+  .pc {
+    .bar {
+      width: 124px;
+      height: 5px;
+      background: linear-gradient(90deg, #6C78F6 2.82%, #62D9FB 100%);
+      border-radius: 3px;
+    }
+  }
+
+  .mobile {
+    .bar {
+      width: 124px;
+      height: 5px;
+      background: linear-gradient(90deg, #6C78F6 2.82%, #62D9FB 100%);
+      border-radius: 3px;
+    }
+
+    h1 {
+      font-size: 2.4rem !important;
+    }
+
+    p {
+      font-size: 1.1rem !important;
+    }
+  }
+}
+
+.view-4 {
+  .pc {
+    .bar {
+      width: 124px;
+      height: 5px;
+      background: linear-gradient(90deg, #6C78F6 2.82%, #62D9FB 100%);
+      border-radius: 3px;
+    }
+    .neg-mt {
+      margin-top: -10px;
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .mobile {
+    .bar {
+      width: 124px;
+      height: 5px;
+      background: linear-gradient(90deg, #6C78F6 2.82%, #62D9FB 100%);
+      border-radius: 3px;
+    }
+
+    h1 {
+      font-size: 2.4rem !important;
+    }
+
+    p {
+      font-size: 1.1rem !important;
+    }
+  }
+}
+
+.view-5 {
+  margin-top: 250px;
+
+  .pc {
+    .bar {
+      width: 124px;
+      height: 5px;
+      background: linear-gradient(90deg, #6C78F6 2.82%, #62D9FB 100%);
+      border-radius: 3px;
+    }
+    .bg {
+      background-image: url("/assets/Group 31.png");
+      border-radius: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 100px;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #647185;
+
+      mat-icon {
+        font-size: 16px;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .separator {
+      width: 90%;
+      height: 1px;
+      background-color: #8FA9FC;
+      margin: 90px auto;
+    }
+  }
+
+  .mobile {
+    padding: 0;
+
+    margin-top: 700px;
+    width: 100%;
+
+    .bar {
+      width: 124px;
+      height: 5px;
+      background: linear-gradient(90deg, #6C78F6 2.82%, #62D9FB 100%);
+      border-radius: 3px;
+    }
+
+    h1 {
+      font-size: 2.4rem !important;
+    }
+
+    p {
+      font-size: 1.1rem !important;
+    }
+
+    .blue-wrapper {
+      background-image: url("/assets/Group 31.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+
+      padding: 70px 40px;
+
+
+      .download-app {
+        font-size: 55px !important;
+        font-weight: bold !important;
+        line-height: 1.4;
+      }
+      .download-app-desc {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .view-1 {
+    h1 {
+      font-size: 2.4rem !important;
+    }
+
+    p {
+      font-size: 1.5rem !important;
+    }
+
+    .btns {
+      margin-top: 0.4rem !important;
+    }
+
+    .be-a-part {
+      margin-top: 40px;
+    }
+  }
+
+  .mobile {
+    display: flex;
+  }
+  .pc {
+    display: none;
+  }
+  .view-1-left {
+    padding-bottom: 0;
+    margin-top: 3rem;
+    align-self: baseline !important;
+  }
+  .right {
+    display: none !important;
+  }
+  .view-1-img-pc {
+    display: none !important;
+    overflow-x: hidden;
+  }
+
+  .view-1-img-mobile {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+  .pc {
+    display: flex;
+  }
+}

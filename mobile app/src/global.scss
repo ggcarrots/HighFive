@@ -1,0 +1,46 @@
+// App Global CSS
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply globally. These styles are for
+// the entire app and not just one component. Additionally, this file can be
+// also used as an entry point to import other Sass files to be included in the
+// output CSS.
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root,
+:root[mode="md"],
+:root[mode="ios"] {
+  --ion-font-family: Montserrat, 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  --ion-color-light: #ffffff;
+  --ion-color-contrast: #828FFB;
+  font-family: var(--ion-font-family) !important;
+}
+.header-md:after {
+  background-image: none !important;
+}
+
+
+.big-button {
+  text-transform: none;
+
+  button {
+    background: linear-gradient(90deg, #2A99FE 13.89%, #828FFB 50.08%) !important;
+  }
+}
+
+.searchbar-input {
+  box-shadow: none !important;
+  background: rgba(190, 194, 218, 0.21) !important;
+  border-radius: 3px !important;
+}

@@ -1,0 +1,14 @@
+.content {
+  position: relative;
+  text-align: center;
+
+  background: #23D9E3;
+
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    color: #FFFFFF;
+  }
+}

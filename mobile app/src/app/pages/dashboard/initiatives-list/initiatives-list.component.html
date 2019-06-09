@@ -1,0 +1,44 @@
+<ion-card *ngFor="let initiative of initiatives; trackBy: trackBy">
+  <ion-card-header style="display: flex; align-items: center;">
+    <img src="assets/img/Group 8.png" style="width: 70px;height: 70px;"/>
+    <div style="margin-left: 10px;">
+      <div class="username">
+        {{initiative.author.first_name}} {{initiative.author.last_name}}
+      </div>
+      <div class="bohater-badge" [ngStyle]="{visibility: initiative.author.badge}"
+           [class.lokalny-bohater]="initiative.author.badge === 'Lokalny Bohater'"
+           [class.urzednik]="initiative.author.badge === 'Urzędnik'"
+      >
+        {{initiative.author.badge || 'x'}}
+      </div>
+    </div>
+    <div class="like-count" (click)="toggleLike(initiative)">
+      <img [src]="isLiked(initiative) ? 'assets/img/hearth-full.png' : 'assets/img/hearth.png'">
+      <div class="count"
+           [class.is-liked]="isLiked(initiative)"
+      >
+        {{initiative.votes}}
+      </div>
+    </div>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class="title">{{initiative.title}}</div>
+    <div class="description">
+      {{initiative.body | truncatedText:initiative.truncateBody}}
+      <span style="font-weight: bold;color: #828FFB;" *ngIf="initiative.truncateBody" (click)="initiative.truncateBody = !initiative.truncateBody">Zobacz więcej</span>
+    </div>
+    <img [src]="initiative.cover" alt="Image" class="image" [routerLink]="['/initiative-details',initiative.id]" *ngIf="initiative.cover">
+    <div class="separator"></div>
+
+    <div class="links">
+      <a [routerLink]="['/initiative-details',initiative.id]">
+        {{initiative.comments_count === 1 ? '1 komentarz' : initiative.comments_count + ' komentarzy'}}
+      </a>
+      <a [routerLink]="''">
+        {{initiative.shares_count === 1 ? '1 udostępnienie' : initiative.shares_count + ' udostępnień'}}
+      </a>
+    </div>
+  </ion-card-content>
+
+</ion-card>

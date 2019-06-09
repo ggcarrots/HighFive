@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://hacking-carrots-backend.carrots.roslaniec.dev",
+    "secure": true
+  }
+}

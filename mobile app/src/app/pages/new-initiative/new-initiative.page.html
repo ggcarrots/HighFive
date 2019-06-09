@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Nowa inicjatywa</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="wrapper">
+    <img src="assets/img/new-initiative.png" alt="">
+    <div class="header-title">Co chcesz dodać?</div>
+
+    <form [formGroup]="rootForm"
+        (ngSubmit)="createInitiative()"
+    >
+      <ion-list>
+        <ion-item class="rounded">
+          <ion-label position="floating" color="primary">Nazwa</ion-label>
+          <ion-input type="text" spellcheck="false" autocapitalize="off" formControlName="title">
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="rounded">
+          <ion-label position="floating" color="primary">Opis</ion-label>
+          <ion-textarea formControlName="body" rows="3">
+
+          </ion-textarea>
+        </ion-item>
+
+      </ion-list>
+
+      <div class="no-idea">Nie masz pomysłu?</div>
+      <div class="inspire">Zainspiruj się!</div>
+
+      <div class="tiles">
+
+        <div class="tile" (click)="updateTitle('Nowy chodnik')">Nowy chodnik</div>
+        <div class="tile" (click)="updateTitle('Karmniki dla ptaków')">Karmniki dla ptaków</div>
+        <div class="tile" (click)="updateTitle('Domek dla jeży')">Domek dla jeży</div>
+
+      </div>
+
+      <button class="add-button"
+              type="submit"
+              [disabled]="rootForm.invalid"
+      >
+        Dodaj inicjatywę
+      </button>
+
+    </form>
+
+  </div>
+</ion-content>

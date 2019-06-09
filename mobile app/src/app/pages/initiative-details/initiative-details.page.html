@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Inicjatywy</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="initiative">
+
+  <div class="wrapper">
+    <div class="header">
+      <div class="title">{{initiative.title}}</div>
+      <div class="like-count" (click)="toggleLike(initiative)">
+        <img [src]="isLiked(initiative.user_vote) ? 'assets/img/hearth-full.png' : 'assets/img/hearth.png'">
+        <div class="count"
+             [class.is-liked]="isLiked(initiative.user_vote)"
+        >
+          {{initiative.votes}}
+        </div>
+      </div>
+    </div>
+
+    <div class="founded-badge" *ngIf="alreadyFounded">
+      Zgłoszona do urzędu miasta
+    </div>
+
+    <div class="description">
+      {{initiative.body | truncatedText:initiative.truncateBody}}
+      <span style="font-weight: bold;color: #828FFB;" *ngIf="initiative.truncateBody" (click)="initiative.truncateBody = !initiative.truncateBody">Zobacz więcej</span>
+    </div>
+
+    <img [src]="initiative.cover" alt="Image" class="image" *ngIf="initiative.cover">
+
+    <button class="request-founding" (click)="requestFounding()"
+            [disabled]="alreadyFounded"
+    >
+      Ubiegaj o fundusz
+      <img src="assets/img/chevron-right.png" alt="Image" class="chevron">
+    </button>
+
+    <div class="separator"></div>
+
+
+    <div class="comments">
+
+      <div *ngIf="!comments || !comments?.length; else commentsList" class="empty-comments">
+
+        <img src="assets/img/empty-comments.png" alt="" style="margin-bottom: 10px;">
+
+        <div class="links">
+          <span class="link">
+            {{initiative.comments_count === 1 ? '1 komentarz' : initiative.comments_count + ' komentarzy'}}
+          </span>
+          <span class="link">
+            {{initiative.shares_count === 1 ? '1 udostępnienie' : initiative.shares_count + ' udostępnień'}}
+          </span>
+        </div>
+
+      </div>
+
+      <ng-template #commentsList>
+
+        <div class="links">
+          <span class="link">
+            {{initiative.comments_count === 1 ? '1 komentarz' : initiative.comments_count + ' komentarzy'}}
+          </span>
+          <span class="link">
+            {{initiative.shares_count === 1 ? '1 udostępnienie' : initiative.shares_count + ' udostępnień'}}
+          </span>
+        </div>
+
+        <div class="comment-card" *ngFor="let comment of comments">
+          <div class="header2">
+            <img src="assets/img/Group 8.png" style="width: 70px;height: 70px;"/>
+            <div style="margin-left: 10px;">
+              <div class="username">
+                {{comment.user.first_name}} {{comment.user.last_name}}
+              </div>
+              <div class="bohater-badge" [ngStyle]="{visibility: comment.user.badge}"
+                   [class.lokalny-bohater]="comment.user.badge === 'Lokalny Bohater'"
+                   [class.urzednik]="comment.user.badge === 'Urzędnik'"
+              >
+                {{comment.user.badge || 'x'}}
+              </div>
+            </div>
+            <div class="like-count" (click)="toggleCommentLink(comment)">
+              <img [src]="isLiked(comment.user_vote) ? 'assets/img/hearth-full.png' : 'assets/img/hearth.png'">
+              <div class="count"
+                   [class.is-liked]="isLiked(comment.user_vote)"
+              >
+                {{comment.votes}}
+              </div>
+            </div>
+          </div>
+
+          <div class="text">
+            {{comment.body}}
+          </div>
+        </div>
+
+
+      </ng-template>
+
+
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,20 @@
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    background-color: transparent;
+    padding: 20px 30px;
+
+    color: rgba(59, 51, 80, 0.51);
+
+    &.selected {
+      color: #3B3350;
+    }
+  }
+}

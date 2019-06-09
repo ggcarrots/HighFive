@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-split-pane>
+
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar color="light">
+          <ion-title>Go Locals</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+        <ion-list>
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="logout()">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+                Logout
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet main></ion-router-outlet>
+
+  </ion-split-pane>
+
+</ion-app>

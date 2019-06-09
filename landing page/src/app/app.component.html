@@ -1,0 +1,205 @@
+<div class="example-container">
+
+
+  <div class="view view-1 mt-4" id="top-panel">
+    <div class="container nav-1 d-flex justify-content-between align-items-center">
+      <div class="left links">
+        <a class="btn btn-link" (click)="onClick('#top-panel')" style="padding-left: 0;">go locals</a>
+      </div>
+      <div class="right d-flex links">
+        <a class="btn btn-link" (click)="onClick('#how-it-works-panel')">Jak to działa?</a>
+        <a class="btn btn-link" (click)="onClick('#initiatives-panel')">Inicjatywy</a>
+        <a class="btn btn-link" (click)="onClick('#easy-panel')">To proste</a>
+        <a class="btn btn-link" (click)="onClick('#download-panel')">Pobierz aplikację</a>
+      </div>
+    </div>
+
+
+    <div class="view-1-content d-flex h-100 container">
+
+      <div class="view-1-left flex-grow-1 align-items-center align-self-center h-100">
+        <div class="d-flex flex-column h-100 w-100">
+          <h1 style="font-size: 3.5rem;" class="be-a-part">
+            Bądź częścią
+            <br>
+            lokalnej społeczności
+          </h1>
+          <p class="text-muted my-3 font-weight-light" style="font-size: 1.8rem">Od bloku, przez ulice, po dzielnice</p>
+
+          <div class="mt-5 btns">
+            <img class="mr-3 my-3" height="70" src="/assets/appstore.png"/>
+            <img height="70" src="/assets/googleplay.png"/>
+          </div>
+
+          <div class="view-1-img-mobile d-none view-1-right flex-grow-1 flex-shrink-0 w-100"></div>
+
+        </div>
+
+
+      </div>
+      <div class="view-1-img-pc position-absolute d-flex h-100 flex-row-reverse w-100"
+           style="height: 100vh; top:0; z-index: -1; max-width: 100vw; position:absolute; top:0; left: 0">
+        <div class="view-1-right flex-grow-0 flex-shrink-0 h-100 mt-5" style="width: 67%; max-height: 70%"></div>
+      </div>
+
+    </div>
+
+    <div class="view view-2" id="how-it-works-panel">
+
+      <div class="container h-100">
+        <div class="pc h-100">
+          <div class="w-50 flex-shrink-0 h-100 align-items-center d-flex flex-column justify-content-center">
+            <img class="mx-auto" src="/assets/phone-1.png" style="max-width: 90%; width: 600px;"/>
+          </div>
+          <div class="w-50 flex-shrink-0  d-flex flex-column justify-content-center">
+            <h1 class="text-white my-5 how-it-works-title">
+              Jak to działa?
+            </h1>
+            <p class="text-white how-it-works">
+              Włącz się w lokalną społeczność, w końcu razem można więcej! Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Integer eget dui vel ante interdum luctus eu commodo nulla. Nunc non cursus libero, vel
+              iaculis nibh. Cras sit amet neque nibh. Vivamus pulvinar euismod vehicula.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.Oczywiście, że zdajemy sobie sprawę, że nie
+              projektuje się z “Lorem ipsum”, ale jest już 2:00 rano :)
+            </p>
+          </div>
+        </div>
+
+        <div class="mobile h-100">
+          <div class="align-self-center">
+            <h1 class="text-white my-5">
+              Jak to działa?
+            </h1>
+            <p class="text-white how-it-works">
+              Włącz się w lokalną społeczność, w końcu razem można więcej! Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Integer eget dui vel ante interdum luctus eu commodo nulla. Nunc non cursus libero, vel
+              iaculis nibh. Cras sit amet neque nibh. Vivamus pulvinar euismod vehicula.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.Oczywiście, że zdajemy sobie sprawę, że nie
+              projektuje się z “Lorem ipsum”, ale jest już 2:00 rano :)
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="view view-3" id="initiatives-panel">
+      <div class="pc container flex-column align-items-center mt-5 justify-content-center">
+        <div class="bar"></div>
+        <h1 class="text-center mt-5 mb-3">Inicjatywy</h1>
+        <p class="text-center my-4 text-muted mx-auto" style="max-width: 70%;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mi venenatis, bibendum nunc id, imperdiet
+          tellus. Quisque id turpis congue nibh condimentum aliquet vel sit amet ante. Donec in eros elit. Duis aliquam
+          orci sit amet sodales posuere. Phasellus vitae turpis vitae nisl commodo condimentum.
+        </p>
+
+        <div class="d-flex mt-5">
+          <img class="mt-5" height="450px" src="../assets/Group_25.png"/>
+          <img height="450px" src="../assets/Group_26.png"/>
+          <img class="mt-5" height="450px" src="../assets/Group_27.png"/>
+        </div>
+      </div>
+      <div class="mobile container flex-column justify-content-center mt-5">
+        <div class="bar"></div>
+        <h1 class="mt-4 mb-3">Inicjatywy</h1>
+        <p class="my-3 text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mi venenatis, bibendum nunc id, imperdiet
+          tellus. Quisque id turpis congue nibh condimentum aliquet vel sit amet ante. Donec in eros elit. Duis aliquam
+          orci sit amet sodales posuere. Phasellus vitae turpis vitae nisl commodo condimentum.
+        </p>
+
+        <img class="mx-auto" src="/assets/Group_25.png" style="max-width: 90%"/>
+        <img class="mx-auto" src="/assets/dots.png" style="max-width: 96%"/>
+      </div>
+    </div>
+    <div class="view view-4" id="easy-panel">
+      <div class="pc container flex-column align-items-center justify-content-center">
+        <div class="bar"></div>
+        <h1 class="text-center my-5">To bardzo proste</h1>
+        <p class="text-center text-muted" style="max-width: 70%">Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nullam nec mi venenatis, bibendum nunc id, imperdiet
+          tellus. Quisque id turpis congue nibh condimentum aliquet vel sit amet ante. Donec in eros elit. Duis aliquam
+          orci sit amet sodales posuere. Phasellus vitae turpis vitae nisl commodo condimentum.</p>
+
+        <div class="d-flex justify-content-between w-100" style="max-width: 100%; flex-basis: 0">
+          <div class="d-flex flex-shrink-0 flex-column" style="width: 33%">
+            <img class="mx-auto" src="../assets/n1.png" style="max-width: 35%"/>
+            <span class="d-block text-center w-100 neg-mt">Zarejestruj się</span>
+            <img src="/assets/iPhone X (6).png" width="100%"/>
+          </div>
+          <div class="d-flex flex-shrink-0 flex-column" style="width: 33%">
+            <img class="mx-auto" src="../assets/n2.png" style="max-width: 35%"/>
+            <span class="d-block text-center w-100 neg-mt">Wybierz lokalizację</span>
+            <img src="/assets/iPhone X (7).png" width="100%"/>
+          </div>
+          <div class="d-flex flex-shrink-0 flex-column" style="width: 33%">
+            <img class="mx-auto" src="../assets/n3.png" style="max-width: 35%"/>
+            <span class="d-block text-center w-100 neg-mt">Twórz lokalną społeczność!</span>
+            <img src="/assets/iPhone X (8).png" width="100%"/>
+          </div>
+        </div>
+
+      </div>
+      <div class="mobile mt-5 container flex-column justify-content-center">
+        <div class="bar my-5"></div>
+        <h1 class="my-3">To bardzo <br> proste</h1>
+        <p class="text-muted" style="max-width: 70%">Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nullam nec mi venenatis, bibendum nunc id, imperdiet
+          tellus. Quisque id turpis congue nibh condimentum aliquet vel sit amet ante. Donec in eros elit. Duis aliquam
+          orci sit amet sodales posuere. Phasellus vitae turpis vitae nisl commodo condimentum.</p>
+
+        <img class="mx-auto" src="../assets/n1.png" style="max-width: 35%"/>
+        <span class="d-block text-center w-100 neg-mt">Zarejestruj się</span>
+        <img class="mx-auto" src="/assets/iPhone X (6).png" style="object-fit: cover;  max-width: 90%"/>
+      </div>
+    </div>
+
+
+    <div class="view view-5" id="download-panel">
+      <div class="pc flex-column container">
+        <div class="bg w-100 d-flex flex-column align-items-center justify-content-center" style="height: 320px;">
+          <p class="position-absolute text-center text-white" style="margin-top: -50px;">Ty też możesz mieć wpływ na
+            swoje otoczenie</p>
+          <h1 class="text-center text-white">Pobierz darmową aplikację</h1>
+        </div>
+        <div class="btns d-flex justify-content-center mb-5" style="margin-top: -35px">
+          <img class="mr-4" height="70" src="/assets/appstore.png"/>
+          <img class="ml-4" height="70" src="/assets/googleplay.png"/>
+        </div>
+
+        <h2 class="text-muted font-weight-light text-center mt-5">
+          Potrzebujesz pomocy? Skontaktuj się z nami
+        </h2>
+
+        <div class="contact-info">
+          <div>
+            <mat-icon>phone</mat-icon>
+            (123) 2345 432 45
+          </div>
+          <div>
+            <mat-icon>phone</mat-icon>
+            (123) 4542 321 53
+          </div>
+          <div>
+            <mat-icon>mail</mat-icon>
+            someemail@golocals.pl
+          </div>
+        </div>
+
+        <div class="separator">
+
+        </div>
+      </div>
+
+      <div class="mobile container">
+        <div class="blue-wrapper">
+          <p class="text-white download-app-desc">Ty też możesz mieć wpływ na
+            swoje otoczenie</p>
+          <h1 class="text-white download-app">Pobierz darmową aplikację</h1>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

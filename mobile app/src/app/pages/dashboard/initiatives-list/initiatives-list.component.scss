@@ -1,0 +1,104 @@
+.bohater-badge {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #848CBA;
+
+  background: rgba(132, 140, 186, 0.18);
+  border-radius: 3px;
+
+  padding: 5px 9px;
+
+  &.lokalny-bohater {
+    color: #FFA000;
+    background: rgba(255, 193, 7, 0.14);
+  }
+  &.urzednik {
+    color: #FB829F;
+    background: rgba(249, 130, 251, 0.18);
+  }
+}
+
+.username {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #3B3350;
+  margin-bottom: 5px;
+}
+
+.like-count {
+  position: relative;
+  margin-left: auto;
+
+  .count {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 22%;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #848CBA;
+
+    &.is-liked {
+      color: #828FFB;
+    }
+  }
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 23px;
+
+  color: #3B3350;
+
+  margin-bottom: 10px;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+
+  color: #848CBA;
+  margin-bottom: 5px;
+
+}
+
+.image {
+  width: 100%;
+  max-height: 308px;
+
+  margin-bottom: 17px;
+}
+
+.separator {
+  background: #DADDEA;
+  border-radius: 2px;
+  width: 100%;
+
+  margin-bottom: 28px;
+  height: 1px;
+}
+
+.links {
+
+  a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #848CBA;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+}

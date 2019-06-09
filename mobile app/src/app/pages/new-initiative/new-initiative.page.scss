@@ -1,0 +1,94 @@
+.wrapper {
+  text-align: center;
+
+  margin-top: 40px;
+  padding: 0 44px;
+}
+
+.header-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+
+  color: #3B3350;
+  margin: 20px 0;
+}
+
+.no-idea {
+  margin-top: 35px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #3B3350;
+
+}
+
+.inspire {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 27px;
+  text-align: center;
+
+  color: #3B3350;
+
+}
+
+.tiles {
+  padding: 45px;
+  margin: 0 -45px;
+  display: flex;
+
+  align-items: center;
+
+  overflow-x: auto;
+
+  .tile {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 60px rgba(132, 140, 186, 0.2);
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #3B3350;
+
+    padding: 32px 27px;
+
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+  }
+}
+
+.add-button {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #FFFFFF;
+  background: #23D9E3;
+  border-radius: 3px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &:disabled {
+    background-color: rgba(35, 217, 227, 0.47);
+  }
+}

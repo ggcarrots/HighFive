@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="login" style="text-transform: none;">
+        Zaloguj
+      </ion-segment-button>
+      <ion-segment-button value="register" style="text-transform: none;">
+        Zarejestruj
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="login-logo">
+    <img src="assets/img/AVATAR.png" alt="Ionic logo">
+  </div>
+  <h2 class="login-header">Zaloguj się</h2>
+
+  <form #loginForm="ngForm" novalidate class="form">
+    <ion-list>
+      <ion-item class="rounded">
+        <ion-label position="floating" color="primary">Nazwa użytkownika</ion-label>
+        <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
+          Username is required
+        </p>
+      </ion-text>
+
+      <ion-item class="rounded">
+        <ion-label position="floating" color="primary">Hasło</ion-label>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
+          Password is required
+        </p>
+      </ion-text>
+    </ion-list>
+
+    <ion-row class="button-row">
+      <ion-col>
+        <div (click)="onLogin(loginForm)" class="login-button">
+          Zaloguj się
+          <img src="assets/img/chevron-right.png" alt="Image" class="chevron">
+        </div>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-row style="margin-bottom: 10px;">
+    <ion-col>
+      <div class="forgot-password">Zapomniałeś hasła?</div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col style="text-align: center;">
+      <img src="assets/img/f.png" alt="Facebook logo" style="margin: 0 5px;">
+      <img src="assets/img/g.png" alt="Google logo" style="margin: 0 5px;">
+    </ion-col>
+  </ion-row>
+
+</ion-content>
